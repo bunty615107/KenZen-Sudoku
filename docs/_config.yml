@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: KenZen-Sudoku
+description: A mindful Sudoku experience for iOS and Android
+show_downloads: false
+google_analytics:

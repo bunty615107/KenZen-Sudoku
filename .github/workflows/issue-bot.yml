@@ -1,0 +1,19 @@
+name: Issue Bot
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  reply-to-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-reply to new issues
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "Thanks for opening an issue! We will take a look as soon as possible. 🧩"
+            })

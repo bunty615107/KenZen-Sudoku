@@ -1,0 +1,26 @@
+name: Scheduled Bi-weekly Release
+on:
+  schedule:
+    - cron: '0 0 */14 * *'
+  workflow_dispatch:
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate release tag
+        id: tag
+        run: |
+          echo "release_tag=v$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          name: Release ${{ steps.tag.outputs.release_tag }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
