@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenZen Sudoku 🧩</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --accent-color: #7c3aed;
+            --text-color: #ffffff;
+            --card-bg: #161b22;
+            --card-border: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 .emoji {
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #8b949e;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--card-border);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #8b949e;
+            border-top: 1px solid var(--card-border);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KenZen Sudoku <span class="emoji">🧩</span></h1>
+        <p class="tagline">A mindful Sudoku experience for iOS and Android</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">📱 App Store</a>
+            <a href="#" class="btn btn-primary">🤖 Play Store</a>
+            <a href="https://github.com/KenZen-Sudoku" class="btn">⭐ GitHub</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="features">
+            <div class="feature-card">
+                <h3>🎚️ Multiple Difficulty Levels</h3>
+                <p>From gentle warm-ups to mind-bending expert puzzles, find the perfect challenge for your current mood.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💡 Smart Hints System</h3>
+                <p>Get a nudge in the right direction without spoiling the puzzle when you find yourself stuck.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⏱️ Zen Timer</h3>
+                <p>Track your personal bests or play in zen mode without the pressure of a ticking clock.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Cross-Platform</h3>
+                <p>A seamless, beautiful experience whether you are playing on an iOS or Android device.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 KenZen Sudoku. Open source and built with React Native.</p>
+    </footer>
+
+</body>
+</html>
